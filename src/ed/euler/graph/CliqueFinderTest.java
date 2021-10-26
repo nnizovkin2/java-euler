@@ -1,6 +1,5 @@
 package ed.euler.graph;
 
-import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class CliqueFinderTest {
@@ -8,7 +7,7 @@ public class CliqueFinderTest {
         Graph g = RandomGraphFactory.buildGraph(5000, 1000);
         System.out.println("Start strict method");
         long start = System.currentTimeMillis();
-        var ss = new StrictCliqueFinder(g);
+        var ss = new ExactCliqueFinder(g);
         var c = ss.findClique(9);
         long stop = System.currentTimeMillis();
         System.out.println(c + " Strict method. time " + (stop-start));

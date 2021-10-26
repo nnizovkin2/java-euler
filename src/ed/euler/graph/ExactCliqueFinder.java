@@ -3,11 +3,11 @@ package ed.euler.graph;
 import java.util.*;
 import java.util.stream.Collectors;
 
-//strict solution with permutations
-public class StrictCliqueFinder {
+//exact solution with permutations
+public class ExactCliqueFinder {
     Graph g;
 
-    public StrictCliqueFinder(Graph g) {
+    public ExactCliqueFinder(Graph g) {
         this.g = g.cl();
     }
 
