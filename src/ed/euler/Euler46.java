@@ -1,7 +1,9 @@
-import java.util.ArrayList;
+package ed.euler;
+
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
+
+import static ed.euler.prime.PrimeUtil.primesTill;
 
 public class Euler46 {
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Euler46 {
         int[] sq = doubleSquaresTill(1000000);
         for (int i = 0; i < 1000000; i++) {
             if (!isComposite(i, set, sq)) {
-                System.out.println(i);;
+                System.out.println(i);
             }
         }
     }
@@ -25,33 +27,6 @@ public class Euler46 {
         }
 
         return false;
-    }
-
-    static ArrayList<Integer> primesTill(int n) {
-        ArrayList<Integer> res = new ArrayList<>();
-        int i = 2;
-        while (i <= n) {
-            if(i % 10000000 == 0) {
-                System.out.println(System.currentTimeMillis());
-            }
-            boolean isPrime = true;
-            int lim = (int)Math.sqrt(i) + 1;
-            for (Integer p : res) {
-                if (i % p == 0) {
-                    isPrime = false;
-                    break;
-                }
-                if(p > lim) {
-                    break;
-                }
-            }
-            if (isPrime) {
-                res.add(i);
-            }
-            i++;
-        }
-
-        return res;
     }
 
     int[] doubleSquaresTill(int n) {

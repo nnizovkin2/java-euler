@@ -1,5 +1,9 @@
+package ed.euler;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static ed.euler.prime.PrimeUtil.primesTill;
 
 public class Euler47 {
     public static void main(String[] args) {
@@ -7,7 +11,7 @@ public class Euler47 {
     }
     int find(int max) {
         int[] divNum = new int[max];
-        ArrayList<Integer> primes = Euler46.primesTill(max);
+        ArrayList<Integer> primes = primesTill(max);
         for (int i = 0; i < max; i++) {
             divNum[i] = getPrimeDiv(i, primes).size();
         }

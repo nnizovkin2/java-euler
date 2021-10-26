@@ -1,10 +1,14 @@
+package ed.euler;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import static ed.euler.prime.PrimeUtil.primesTill;
+
 public class Euler50 {
     public static void main(String[] args) {
-        ArrayList<Integer> p = Euler46.primesTill(1000000);
+        ArrayList<Integer> p = primesTill(1000000);
         Set<Integer> set = new HashSet<>(p);
         int[] sums = new int[p.size() + 1];
         int sum = 0;

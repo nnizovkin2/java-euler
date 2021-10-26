@@ -1,8 +1,8 @@
+package ed.euler;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.LongStream;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class Euler45 {
 //    ans = filter (\n->(n `elem` triangle) && (n `elem` pentagonal)) hexagonal
