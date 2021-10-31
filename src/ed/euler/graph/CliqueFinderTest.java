@@ -4,11 +4,11 @@ import java.util.stream.Collectors;
 
 public class CliqueFinderTest {
     public static void main(String[] args) {
-        Graph g = RandomGraphFactory.buildGraph(5000, 1000);
+        Graph g = RandomGraphFactory.buildGraph(10000, 2000);
         System.out.println("Start strict method");
         long start = System.currentTimeMillis();
         var ss = new ExactCliqueFinder(g);
-        var c = ss.findClique(9);
+        var c = ss.findClique(10);
         long stop = System.currentTimeMillis();
         System.out.println(c + " Strict method. time " + (stop-start));
 
