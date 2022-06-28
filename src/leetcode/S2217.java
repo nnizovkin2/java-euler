@@ -2,11 +2,11 @@ package leetcode;
 
 public class S2217 {
     public long[] kthPalindrome(int[] queries, int intLength) {
-        long[] res = new long[queries.length];
+        long[] r = new long[queries.length];
         for (int i = 0; i < queries.length; i++) {
-            res[i] = gen(queries[i], intLength);
+            r[i] = gen(queries[i], intLength);
         }
-        return res;
+        return r;
     }
 
     private long gen(int query, int l) {
